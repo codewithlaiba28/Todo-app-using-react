@@ -39,3 +39,11 @@
   right: 20px;
   cursor: pointer;
 }
+.completetodo {
+  text-decoration: line-through;
+  color: red;
+  background-color: lime;
+}
+.todo-app {
+  background-color: lightgray;
+}
