@@ -12,7 +12,7 @@ const Home = () => {
       <Hero tittle="Manage Your Tasks" subtittle="Like a Pro" text="A simple, fast, and beautiful todo manager built with modern technology to help you stay organized and productive." />
       <About1 />
       <Features />
-      <GetinTouch />
+      <GetInTouch />
       <Contact />
       <Footer />
     </div>

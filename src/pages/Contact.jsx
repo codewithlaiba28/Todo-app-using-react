@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div>
       <Hero tittle="Contact Us" subtittle="We're Here to Help" text="Have questions or need assistance? Reach out to our support team for prompt and friendly help." />
-      <GetinTouch />
+      <GetInTouch />
       <Contacts />
       <Footer />
     </div>

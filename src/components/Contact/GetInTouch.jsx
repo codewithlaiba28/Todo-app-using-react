@@ -20,4 +20,4 @@ const GetInTouch = () => {
     )
 }
 
-export default GetinTouch
+export default GetInTouch
