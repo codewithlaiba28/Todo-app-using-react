@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
-import GetinTouch from '../components/Contact/GetinTouch'
+import GetInTouch from '../components/Contact/GetInTouch'
 import Contacts from '../components/Contact/Contact'
 
 const Contact = () => {

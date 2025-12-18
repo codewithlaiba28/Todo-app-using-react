@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import About1 from '../components/About1'
 import Features from '../components/Features/Features'
-import GetinTouch from '../components/Contact/GetinTouch'
+import GetInTouch from '../components/Contact/GetInTouch'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer'
 

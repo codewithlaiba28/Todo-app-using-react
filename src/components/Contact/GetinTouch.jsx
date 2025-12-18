@@ -1,9 +1,9 @@
 import React from 'react'
 import "../../index.css";
-import getintouch_image from '../../assets/get-in-touch.png';
+import getintouch_image from '../../assets/Get-in-touch.png';
 import { Link } from 'react-router-dom';
 
-const GetinTouch = () => {
+const GetInTouch = () => {
     return (
         <div className='bg-secondary h-screen flex justify-center items-center text-4xl font-bold text-color '>
             <div className='grid grid-cols-2 gap-10 w-full px-20 items-center'>
