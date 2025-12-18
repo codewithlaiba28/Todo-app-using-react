@@ -5,22 +5,23 @@ import "../index.css";
 import { Link, useLocation } from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = ({ isLogin, setIsLogin }) => {
   const location = useLocation();
+  const [menu, setMenu] = useState(() => {
+    return localStorage.getItem("menu") || "Home";
+  });
+
   useEffect(() => {
     // URL ke hisab se menu update karo
     if (location.pathname === "/") setMenu("Home");
     else if (location.pathname === "/about") setMenu("About");
     else if (location.pathname === "/features") setMenu("Features");
     else if (location.pathname === "/contact") setMenu("Contact");
+    else setMenu("");
   }, [location]);
 
-  const [isLogin, setIsLogin] = useState(false);
-  const [menu, setMenu] = useState(() => {
-    return localStorage.getItem("menu") || "Home";
-  });
-  const handleLoginClick = () => {
-    setIsLogin(!isLogin);
+  const handleLogout = () => {
+    setIsLogin(false);
     setMenu("");
     localStorage.removeItem("menu");
   };
@@ -57,15 +58,25 @@ const Navbar = () => {
 
       </ul>
 
-      <Link to="/login">
+      {isLogin ? (
         <button
-          className="px-8 py-2 rounded-4xl text-xl"
+          className="px-8 py-2 rounded-4xl text-xl cursor-pointer"
           style={{ background: "var(--gradiente-vermelho)" }}
-          onClick={handleLoginClick}
+          onClick={handleLogout}
         >
-          {isLogin ? "Logout" : "Login"}
+          Logout
         </button>
-      </Link>
+      ) : (
+        <Link to="/login">
+          <button
+            className="px-8 py-2 rounded-4xl text-xl cursor-pointer"
+            style={{ background: "var(--gradiente-vermelho)" }}
+            onClick={() => setMenu("")}
+          >
+            Login
+          </button>
+        </Link>
+      )}
     </div>
   );
 };
