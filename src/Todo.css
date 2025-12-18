@@ -1,49 +1,197 @@
 .form {
-  width: 1170px;
+  width: 100%;
+  max-width: 850px;
   margin: auto;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
+
 .form input {
-  border: 1px solid black;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   flex-basis: 80%;
-  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 50px;
+  border-radius: 12px;
+  padding: 0 20px;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.form input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
 }
 
 .form button {
-  flex-basis: 20%;
-  border: 1px solid black;
+  outline: none;
+  flex-basis: 25%;
+  border-radius: 12px;
+  background-color: var(--text-color);
+  color: var(--preto);
+  border: none;
+  font-family: var(--font-hero-family);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.form button:hover {
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.form button:active {
+  transform: scale(0.98);
+}
+
+.outer-div-main {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .outerdiv {
-  width: 1170px;
-  margin: auto;
+  width: 100%;
 }
+
 .outerdiv ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
+
 .outerdiv ul li {
-  border: 1px solid black;
-  background-color: teal;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(8, 17, 26, 0.6);
+  backdrop-filter: blur(5px);
   text-align: left;
   position: relative;
-  padding: 10px;
-  font-size: 25px;
-  margin-bottom: 20px;
+  padding: 15px 50px 15px 20px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.outerdiv ul li:hover {
+  background-color: rgba(8, 17, 26, 0.8);
+  transform: translateX(5px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 .outerdiv ul li span {
   position: absolute;
   right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
 }
+
+.outerdiv ul li span:hover {
+  color: #ff1a1a;
+}
+
 .completetodo {
   text-decoration: line-through;
-  color: red;
-  background-color: lime;
+  opacity: 0.6;
+  background-color: rgba(8, 17, 26, 0.3) !important;
 }
+
 .todo-app {
-  background-color: lightgray;
+  border-radius: 24px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradiente-vermelho);
+  min-height: 100vh;
+  height: auto;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle glow/blob effect behind the container */
+.main-div::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  z-index: 1;
+}
+
+.todo-container-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 950px;
+  margin: auto;
+}
+
+.main-div-title {
+  color: #f8f8f8;
+  margin-bottom: 40px;
+  font-family: var(--font-hero-family);
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.color-todo-app {
+  color: #f8f8f8;
+}
+
+.back-home {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f8f8f8 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-home:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.back-home:active {
+  transform: translateY(0);
 }
