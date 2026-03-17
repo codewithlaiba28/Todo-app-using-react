@@ -77,7 +77,7 @@ function ToDolistItems({ value, indexNumber, todolist, setTodolist }) {
     }
     return (
         <li className={(status) ? "completetodo" : ''} onClick={checkStatus}>
-            <span className="task-number mr-3 opacity-50">{indexNumber + 1}.</span>
+            <span className="task-number mr-3 opacity-50"></span>
             {value}
             <span className="delete-icon" onClick={deleteRow}>&times;</span>
         </li>
